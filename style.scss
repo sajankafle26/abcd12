@@ -1,0 +1,52 @@
+$brand: #0054C0;
+$w: #fff;
+
+@import 'mixin';
+*{ margin: 0; padding: 0; box-sizing: border-box;}
+.container{
+    max-width: 1200px; margin: auto;
+}
+img 
+{
+    width: 100%;
+}
+.top 
+{
+    background: $brand;
+    color: $w; padding: 40px 0;
+    .flex 
+    {
+        @include flex;
+        margin: 20px 0;
+    }
+    .flex1 
+    {
+        @include flex(start,center ,20px );
+        .box 
+        {
+            width: 200px; color: #000;
+            background: $w; padding: 10px;
+            flex-grow: 1;
+        }
+    }
+}
+.coding
+{
+    padding: 40px 0;
+    .flex 
+    {
+        @include flex;
+        .box{
+            width: 270px;
+            flex-grow: 1;
+        }
+    }
+}
+header 
+{
+    padding: 15px 0;
+    .logo { width: 240px;}
+    .flex{ @include flex}
+    .fw{ font-weight: bold;}
+    button{ background: $brand; color: $w; padding: 10px;}
+}
